@@ -19,6 +19,20 @@
 </head>
 <body>
 
+
+h1>Responsive Image Example using srcset</h1>
+    <img src="Images/default-image.jpg"
+         srcset="Images/small-image.jpg 500w,
+                 Images/medium-image.jpg 1000w,
+                 Images/large-image.jpg 1500w"
+         sizes="(max-width: 600px) 480px,
+                (max-width: 900px) 800px,
+                1200px"
+         alt="Responsive Image">
+    <p>This image uses the srcset attribute to load different image sizes based on the viewport width.</p>
+
+
+    
     <!-- 1. Above the Fold Image: Loads immediately -->
     <h2>Main Profile</h2>
     <img 
@@ -39,6 +53,31 @@
         loading="eager" 
     >
     <br>
+
+
+    <!-- 1. Above the fold image (Loads immediately) -->
+    <h1>Profile Overview</h1>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Profile Picture" 
+        width="150" 
+        height="150" 
+        loading="eager"
+    >
+
+    <hr>
+
+    <!-- 2. Embedded Video Frame (Lazy loaded) -->
+    <h2>Featured Content</h2>
+    <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID" 
+        width="560" 
+        height="315" 
+        title="Featured Video"
+        loading="auto"
+    ></iframe>
+
+    
     <img 
         src="Images/Profile.jpeg" 
         alt="Main Profile Picture" 
