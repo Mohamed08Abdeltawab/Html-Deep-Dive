@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Text Elements and Images Cheatsheet</title>
 </head>
 <body>
-    <h1>hello this is my first web page</h1>
+
+    <!-- ========================================================= -->
+    <!-- 1. Comments & Headings -->
+    <!-- ========================================================= -->
+    
+    <!-- This is an HTML comment. It will not render in the browser. -->
+
+    <h1>Main Page Heading (h1) - Use once per page</h1>
+    <h2>Sub-heading Level 2 (h2)</h2>
+    <h3>Sub-heading Level 3 (h3)</h3>
+    <h4>Sub-heading Level 4 (h4)</h4>
+    <h5>Sub-heading Level 5 (h5)</h5>
+    <h6>Sub-heading Level 6 (h6)</h6>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- 2. Block vs Inline Containers: div, p, span, br -->
+    <!-- ========================================================= -->
+    
+    <div>
+        <h3>Container Section using Div</h3>
+        
+        <p>
+            This is a standard paragraph. You can use a 
+            <span style="color: red; font-weight: bold;">span element</span> 
+            to style a specific portion of text inline.
+        </p>
+
+        <p>First line of text.<br>Second line after a line break tag.</p>
+    </div>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- 3. Preformatted Text -->
+    <!-- ========================================================= -->
+    
+    <pre>
+        This text is inside a pre element.
+        It preserves    spaces    and
+        line breaks exactly as written.
+    </pre>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- 4. Text Formatting & Semantics -->
+    <!-- ========================================================= -->
+    
+    <div>
+        <h3>Text Styling & Semantic Tags:</h3>
+
+        <!-- Physical vs Semantic Bold -->
+        <p><b>Bold (b):</b> Stylistic bold without extra importance.</p>
+        <p><strong>Strong (strong):</strong> Semantic bold indicating high importance/SEO value.</p>
+
+        <!-- Physical vs Semantic Italic -->
+        <p><i>Italic (i):</i> Stylistic italic for alternate voice or technical terms.</p>
+        <p><em>Emphasized (em):</em> Semantic italic providing stress emphasis.</p>
+
+        <!-- Other formatting tags -->
+        <p><u>Underline (u):</u> Underlined text element.</p>
+        <p><small>Small Text (small):</small> Represents side comments or fine print.</p>
+        <p><mark>Highlighted Text (mark):</mark> Text highlighted for reference.</p>
+
+        <!-- Deletion and Insertion -->
+        <p>Original Price: <del>$50.00</del> (deleted text)</p>
+        <p>Discounted Price: <ins>$35.00</ins> (inserted text)</p>
+
+        <!-- Subscript and Superscript -->
+        <p>Chemical formula: H<sub>2</sub>O (subscript)</p>
+        <p>Mathematical expression: X<sup>2</sup> + Y<sup>2</sup> (superscript)</p>
+    </div>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <!-- 5. Image Tag & Attributes -->
+    <!-- ========================================================= -->
+    
+    <div>
+        <h3>Image Element:</h3>
+        
+        <img 
+            src="https://via.placeholder.com/300x150" 
+            alt="Placeholder image description" 
+            width="300" 
+            height="150"
+            loading="lazy"
+        >
+    </div>
+
 </body>
 </html>
