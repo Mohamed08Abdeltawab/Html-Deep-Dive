@@ -3,15 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Optimized Images Example</title>
+    
+    <style>
+        /* Separating CSS from HTML is a best practice */
+        .responsive-img {
+            width: 25%;
+            height: auto;
+        }
+        
+        .gallery {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <img src="Images/Profile.jpeg" alt="Profile Picture" title="Profile Picture"  width="50" height="50" >
-    <img src="Images/Profile.jpeg" alt="Profile Picture" title="Profile Picture"  width="100" height="100" >
-    <img src="Images/Profile.jpeg" alt="Profile Picture" title="Profile Picture"  width="200" height="200" >
-    <img src="Images/Profile.jpeg" alt="Profile Picture" title="Profile Picture"  width="100" height="100" >
-    <img src="Images/Profile.jpeg" alt="Profile Picture" title="Profile Picture"  width="50" height="50" >
+
+    <!-- 1. Above the Fold Image: Loads immediately -->
+    <h2>Main Profile</h2>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Main Profile Picture" 
+        title="Profile Picture" 
+        width="200" 
+        height="200" 
+        loading="eager" 
+    >
     <br>
-    <img src="Images/Profile.jpeg" alt="Profile Picture" title="Profile Picture"  style="width: 25%; height: auto;" >
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Main Profile Picture" 
+        title="Profile Picture" 
+        width="200" 
+        height="200" 
+        loading="eager" 
+    >
+    <br>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Main Profile Picture" 
+        title="Profile Picture" 
+        width="200" 
+        height="200" 
+        loading="eager" 
+    >
+    <br>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Main Profile Picture" 
+        title="Profile Picture" 
+        width="200" 
+        height="200" 
+        loading="eager" 
+    >
+    <hr>
+
+    <!-- 2. Below the Fold Images: Lazy loaded to save bandwidth -->
+    <div class="gallery">
+        <h2>Thumbnail Gallery</h2>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 1" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Medium 1" title="Thumbnail" width="100" height="100" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Medium 2" title="Thumbnail" width="100" height="100" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 2" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 1" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Medium 1" title="Thumbnail" width="100" height="100" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Medium 2" title="Thumbnail" width="100" height="100" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 2" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 1" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Medium 1" title="Thumbnail" width="100" height="100" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Medium 2" title="Thumbnail" width="100" height="100" loading="lazy">
+        <br>
+        
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 2" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        <img src="Images/Profile.jpeg" alt="Thumbnail Small 1" title="Thumbnail" width="50" height="50" loading="lazy">
+        <br>
+        
+    </div>
+
+    <hr>
+    
+    <!-- 3. Responsive Image using CSS class instead of inline styles -->
+    <h2>Responsive Profile</h2>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Responsive Profile Picture" 
+        title="Profile Picture" 
+        class="responsive-img"
+        width="400" 
+        height="400" 
+        loading="lazy"
+    >
+    <br>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Responsive Profile Picture" 
+        title="Profile Picture" 
+        class="responsive-img"
+        width="400" 
+        height="400" 
+        loading="lazy"
+    >
+    <br>
+    <img 
+        src="Images/Profile.jpeg" 
+        alt="Responsive Profile Picture" 
+        title="Profile Picture" 
+        class="responsive-img"
+        width="400" 
+        height="400" 
+        loading="lazy"
+    >
+    <br>
+
 </body>
 </html>
